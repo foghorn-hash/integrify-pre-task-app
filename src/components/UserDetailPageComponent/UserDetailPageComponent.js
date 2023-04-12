@@ -17,7 +17,7 @@ const withLocation = Component => props => {
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const user_id = urlParams.get('user_id')
+const user_id = urlParams.get('user_id');
 
 class UserDetailPageComponent extends Component {
 
