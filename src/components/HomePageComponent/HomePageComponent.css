@@ -1,0 +1,21 @@
+.HomePage {
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+}
+
+.CardImg {
+    margin: 10px;
+}
+
+.CardOverLay {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
+
+.CardTitle {
+    font-weight: bold;
+    color: azure;
+    font-size: 100px !important;
+}
