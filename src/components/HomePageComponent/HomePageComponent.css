@@ -5,7 +5,10 @@
 }
 
 .CardImg {
-    margin: 10px;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    padding: 10px;
 }
 
 .CardOverLay {

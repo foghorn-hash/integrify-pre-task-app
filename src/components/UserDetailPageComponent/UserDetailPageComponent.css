@@ -1,5 +1,10 @@
 .DetailPage {
     padding: 20px;
-    width: 50%;
+    width: 20%;
+    min-width: 400px;
     margin: auto;
+}
+
+ul li {
+    text-align: left;
 }
