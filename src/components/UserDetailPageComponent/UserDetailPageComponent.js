@@ -65,27 +65,29 @@ class UserDetailPageComponent extends Component {
 
         return (
             <div className="DetailPage">
-                <Card>
-                    <Card.Body>
-                        <ul>
-                            <li>Name: {this.state.user.name}</li>
-                            <li>Username: {this.state.user.username}</li>
-                            <li>Email: {this.state.user.email}</li>
-                            <li>Phone: {this.state.user.phone}</li>
-                            <li>Company: {this.state.company}</li>
-                            <li>Website: {this.state.user.website}</li>
-                            <li>Address:
-                                <ul>
-                                    <li>Street: {this.state.street}</li>
-                                    <li>Suite: {this.state.suite}</li>
-                                    <li>City: {this.state.city}</li>
-                                    <li>Zip: {this.state.zip}</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <Button variant="primary" onClick={() => window.location.replace('/')}>GO BACK TO HOME</Button>
-                    </Card.Body>
-                </Card>
+                <div className="animated-card">
+                    <Card className='CardDetailsPage'>
+                        <Card.Body>
+                            <ul>
+                                <li>Name: {this.state.user.name}</li>
+                                <li>Username: {this.state.user.username}</li>
+                                <li>Email: {this.state.user.email}</li>
+                                <li>Phone: {this.state.user.phone}</li>
+                                <li>Company: {this.state.company}</li>
+                                <li>Website: {this.state.user.website}</li>
+                                <li>Address:
+                                    <ul>
+                                        <li>Street: {this.state.street}</li>
+                                        <li>Suite: {this.state.suite}</li>
+                                        <li>City: {this.state.city}</li>
+                                        <li>Zip: {this.state.zip}</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <Button variant="primary" onClick={() => window.location.replace('/')}>GO BACK TO HOME</Button>
+                        </Card.Body>
+                    </Card>
+                </div>
             </div>
             );
 	};

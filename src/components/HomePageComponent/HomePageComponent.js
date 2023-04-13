@@ -67,25 +67,27 @@ class HomePageComponent extends Component {
                     loadMore={getNewUsers}
                     hasMore={this.state.usersAll.length > this.state.users.length}
                     threshold={100}
-                >
+                > 
                     <Row xs={1} md={3} className="g-4">
                     {this.state.users.map((i, index) => (
-                        <Col key={index}>
-                        <Card>
-                            <Card.Img className="CardImg" variant="top" src={photo} />
-                            <Card.ImgOverlay className="CardOverLay">
-                                <Card.Title className="CardTitle">{i.name.charAt(0)}</Card.Title>
-                            </Card.ImgOverlay>
-                            <Card.Body>
-                            <Card.Title>{i.name}</Card.Title>
-                            <Card.Text>
-                                <p>{i.email}</p>
-                                <p>{i.website}</p>
-                            </Card.Text>
-                            <Button variant="primary" onClick={() => window.location.replace('/details?user_id='+i.id)}>MORE DETAILS</Button>
-                            </Card.Body>
-                        </Card>
-                        </Col>
+                            <Col style={{ flexBasis: "33%" }}>
+                                <div className="animated-card">
+                                    <Card className="Card">
+                                        <Card.Img className="CardImg" variant="top" src={photo} />
+                                        <Card.ImgOverlay className="CardOverLay d-flex justify-content-center align-items-center">
+                                            <Card.Title className="CardTitle">{i.name.charAt(0)}</Card.Title>
+                                        </Card.ImgOverlay>
+                                        <Card.Body>
+                                        <Card.Title>{i.name}</Card.Title>
+                                        <Card.Text>
+                                            <p>{i.email}</p>
+                                            <p>{i.website}</p>
+                                        </Card.Text>
+                                        <Button className="CardButton" variant="primary" onClick={() => window.location.replace('/details?user_id='+i.id)}>MORE DETAILS</Button>
+                                        </Card.Body>
+                                    </Card>
+                                </div>
+                            </Col>
                     ))}
                     </Row>
                 </InfiniteScroll>

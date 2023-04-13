@@ -5,6 +5,12 @@
     margin: auto;
 }
 
+.CardDetailsPage {
+    position: relative;
+    margin: 10px;
+    z-index: 2;
+}
+
 ul li {
     text-align: left;
 }
