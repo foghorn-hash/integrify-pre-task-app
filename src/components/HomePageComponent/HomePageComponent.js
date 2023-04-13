@@ -8,6 +8,7 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import photo from './user-backgroud-image.png';
+import LOADING from "../../1487-loading.gif";
 import { useLocation } from "react-router-dom";
 
 const withLocation = Component => props => {
@@ -53,6 +54,10 @@ class HomePageComponent extends Component {
     };
 
     render() {
+
+        if (this.state.users.length == 0) {
+            return <div className="loading-screen"><img src={LOADING} alt="Loading..." /></div>;
+        }
 
         const getNewUsers = async () => {
             const currentPage = this.state.currentPage + 1;

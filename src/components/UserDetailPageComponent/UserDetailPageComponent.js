@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import LOADING from "../../1487-loading.gif";
 import { useLocation } from "react-router-dom";
 
 const withLocation = Component => props => {
@@ -61,6 +62,10 @@ class UserDetailPageComponent extends Component {
 
             }
                   
+        }
+
+        if (this.state.user.lenght == 0) {
+            return <div className="loading-screen"><img src={LOADING} alt="Loading..." /></div>;
         }
 
         return (
